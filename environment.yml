@@ -8,10 +8,12 @@ dependencies:
   - jupyter
   - jupyterlab
   - matplotlib
+  - napari
   - numpy
   - pandas
   - pandas-profiling
   - path.py
+  - pip
   - python=3.6
   - scikit-learn
   - seaborn
@@ -25,6 +27,7 @@ dependencies:
       - missingno
       - nbdime
       - plotly
+      - pyhere
       - pylint
       - pyspark
       - tensorflow
