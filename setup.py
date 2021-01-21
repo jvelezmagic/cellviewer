@@ -21,7 +21,7 @@ setup(
     license='',
     author='Jesús Vélez',
     author_email='jvelezmagic@gmail.com',
-    description='Python Boilerplate contains all the boilerplate you need to participate in a Kaggle competition',
+    description='',
     python_requires='>=3',
     long_description=readme(),
 )
