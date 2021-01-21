@@ -15,6 +15,7 @@ dependencies:
   - path.py
   - pip
   - python=3.9
+  - read-roi
   - scikit-learn
   - seaborn
   - statsmodels
