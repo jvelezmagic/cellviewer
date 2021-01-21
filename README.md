@@ -1,18 +1,9 @@
 # cellviewer
 
-Python Boilerplate contains all the boilerplate you need to participate in a Kaggle competition
 
 ## Prerequisites
 
 - [Anaconda](https://www.anaconda.com/download/) >=5.x
-
-## API credentials
-
-To use the Kaggle API, sign up for a Kaggle account at https://www.kaggle.com. Then go to the 'Account' tab of your user profile (`https://www.kaggle.com/<username>/account`) and select 'Create API Token'. This will trigger the download of `kaggle.json`, a file containing your API credentials. Place this file in the location `~/.kaggle/kaggle.json` (on Windows in the location `C:\Users\<Windows-username>\.kaggle\kaggle.json`).
-
-For your security, ensure that other users of your computer do not have read access to your credentials. On Unix-based systems you can do this with the following command:
-
-`chmod 600 ~/.kaggle/kaggle.json`
 
 # Installation guide
 
@@ -31,13 +22,17 @@ The packages necessary to run the project are now installed inside the conda env
 
 ## Set up project's module
 
-To move beyond notebook prototyping, all reusable code should go into the `src/` folder package. To use that package inside your project, install the project's module in editable mode, so you can edit files in the `src/` folder and use the modules inside your notebooks :
+To move beyond notebook prototyping, all reusable code should go into the `src/`
+folder package. To use that package inside your project, install the project's
+module in editable mode, so you can edit files in the `src/` folder and use the
+modules inside your notebooks :
 
 ```
 pip install --editable .
 ```
 
-To use the module inside your notebooks, add `%autoreload` at the top of your notebook :
+To use the module inside your notebooks, add `%autoreload` at the
+top of your notebook :
 
 ```
 %load_ext autoreload
@@ -47,13 +42,14 @@ To use the module inside your notebooks, add `%autoreload` at the top of your no
 Example of module usage :
 
 ```py
-from src.data.make_dataset import generate
-generate(10)
+from src.utils.paths import here
+here()
 ```
 
 ## Set up Git diff for notebooks and lab
 
-We use [nbdime](https://nbdime.readthedocs.io/en/stable/index.html) for diffing and merging Jupyter notebooks.
+We use [nbdime](https://nbdime.readthedocs.io/en/stable/index.html)
+for diffing and merging Jupyter notebooks.
 
 To configure it to this git project :
 
@@ -88,7 +84,7 @@ Plotly works in notebook but further steps are needed for it to work in Jupyterl
 * plotlywidget  # FigureWidget support
 * @jupyterlab/plotly-extension  # offline iplot support
 
-There are conflict versions between those extensions so check the [latest Plotly README](https://github.com/plotly/plotly.py#installation-of-plotlypy-version-3) to ensure you fetch the correct ones. 
+There are conflict versions between those extensions so check the [latest Plotly README](https://github.com/plotly/plotly.py#installation-of-plotlypy-version-3) to ensure you fetch the correct ones.
 
 ```
 jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.36 --no-build
