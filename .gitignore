@@ -68,7 +68,7 @@ target/
 .ipynb_checkpoints
 
 # Ignore vscode
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
