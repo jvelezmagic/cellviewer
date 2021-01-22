@@ -68,7 +68,7 @@ def read_experiments(
 
 # Helper functions -------------------------------------------------------------
 @pf.register_dataframe_method
-def clean_experiment_columns(df: pd.DataFrame) -> pd.DataFrame:
+def clean_experiment_names(df: pd.DataFrame) -> pd.DataFrame:
     df = df.clean_names(remove_special=True, preserve_original_columns=False)
     df.columns = (
         df.columns
