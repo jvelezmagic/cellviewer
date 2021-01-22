@@ -37,13 +37,13 @@ def read_experiment(
         (pd.read_csv(filepath_or_buffer=zf.open(f.filename), **kwargs)
          .add_columns(
             file_name_id=f.filename,
-            experiment_id= experiment_id
+            experiment_id=experiment_id
          )
         )
         for f in zf.infolist()
     )
 
-    return (pd.concat(dfs_generator, ignore_index=True))
+    return pd.concat(dfs_generator, ignore_index=True)
 
 def read_experiments(
     experiment_files: Iterable[str],
