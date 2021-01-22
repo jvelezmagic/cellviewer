@@ -1,7 +1,6 @@
 import numpy as np
 import janitor
 import pandas as pd
-import pandas_flavor as pf
 
 from zipfile import ZipFile
 from typing import (
@@ -65,15 +64,3 @@ def read_experiments(
     )
 
     return pd.concat(experiments_generator, ignore_index=True)
-
-# Helper functions -------------------------------------------------------------
-@pf.register_dataframe_method
-def clean_experiment_names(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.clean_names(remove_special=True, preserve_original_columns=False)
-    df.columns = (
-        df.columns
-        .str.replace("id", "_id")
-        .str.replace("__", "_")
-    )
-
-    return df
