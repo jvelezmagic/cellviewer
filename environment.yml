@@ -14,7 +14,7 @@ dependencies:
   - pandas-profiling
   - path.py
   - pip
-  - python=3.8
+  - python=3.9.1
   - read-roi
   - scikit-learn
   - seaborn
