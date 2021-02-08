@@ -14,6 +14,7 @@ dependencies:
   - pandas-profiling
   - path.py
   - pip
+  - pyqt
   - python=3.9.1
   - qt>=5.12.3
   - read-roi
