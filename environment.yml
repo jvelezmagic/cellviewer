@@ -19,6 +19,7 @@ dependencies:
   - read-roi
   - scikit-learn
   - seaborn
+  - shapely
   - statsmodels
   - pip:
       - nbdime
